@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    
+    
+
+    
+    <button id="startBtn" onclick="startGame()">بدء اللعبة</button>
+    <div id="board" class="hidden">
+        <!-- يتم إنشاء الجدول هنا -->
+    </div>
+    <div id="resultModal" class="modal hidden">
+        <p id="resultText"></p>
+        <button onclick="restartGame()">إعادة اللعب</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // تأكيد تعريف الدالة قبل استخدامها
+        function startGame() {
+            document.getElementById('startBtn').style.display = 'none';
+            document.getElementById('board').classList.remove('hidden');
+            gameActive = true;
+            renderBoard();
+        }
+    </script>
+</body>
+</html>
